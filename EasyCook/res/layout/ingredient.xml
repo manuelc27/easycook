@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="50dp"
+    android:minHeight="50dp"
+    android:background="@color/white"
+    android:columnCount="1" >
+    
+    <ImageView
+        android:id="@+id/imageLike"
+        android:layout_column="0"
+        android:layout_gravity="top|start"
+        android:layout_row="0"
+        android:visibility="invisible"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/heart" />
+    
+     <ImageView
+        android:id="@+id/imageNoLike"
+        android:layout_column="0"
+        android:layout_gravity="top|start"
+        android:layout_row="0"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:visibility="invisible"
+        android:src="@drawable/down" />
+    
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_column="0"
+        android:layout_gravity="top|end"
+        android:layout_row="0"
+        android:visibility="invisible"
+        android:src="@drawable/ok" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_column="0"
+        android:layout_gravity="bottom|center"
+        android:layout_row="0"        
+        android:textSize="12sp"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_column="0"
+        android:layout_gravity="center"        
+        android:layout_row="0"
+        android:src="@drawable/ic_launcher" />
+    
+</GridLayout>

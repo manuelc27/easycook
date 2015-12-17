@@ -1,0 +1,313 @@
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/appbackgroung"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <LinearLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="fill"
+        android:orientation="vertical" >
+
+        <TabHost
+            android:id="@android:id/tabhost"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:tag="tab0"
+                        android:text="@string/ingredients" />
+
+                    <TextView
+                        android:id="@+id/textRecipes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:tag="tab1"
+                        android:text="@string/recipes" />
+                </TabWidget>
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <LinearLayout
+                        android:id="@+id/maintab1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:background="@drawable/searchbackground" >
+
+                            <ImageButton
+                                android:id="@+id/btnActionLI"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/menu" />
+
+                            <EditText
+                                android:id="@+id/txtSearchI"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ems="10"
+                                android:inputType="text"
+                                android:visibility="invisible" >
+
+                                <requestFocus android:layout_width="wrap_content" />
+                            </EditText>
+
+                            <ImageButton
+                                android:id="@+id/btnActionRI"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/magnifier" />
+                        </LinearLayout>
+
+                        <ScrollView
+                            android:id="@+id/scroll1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <LinearLayout
+                                android:id="@+id/maintab1I"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" >
+
+                                <LinearLayout
+                                    android:id="@+id/tab1"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical" />
+
+                                <LinearLayout
+                                    android:id="@+id/tabICategory"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:id="@+id/btnActionR"
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:background="@drawable/searchbackground" >
+
+                            <ImageButton
+                                android:id="@+id/btnActionLR"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/menu" />
+
+                            <EditText
+                                android:id="@+id/txtSearchR"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ems="10"
+                                android:inputType="text"
+                                android:visibility="invisible" >
+
+                                <requestFocus android:layout_width="wrap_content" />
+                            </EditText>
+
+                            <ImageButton
+                                android:id="@+id/btnActionRR"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/magnifier" />
+                        </LinearLayout>
+
+                        <ScrollView
+                            android:id="@+id/scroll2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <LinearLayout
+                                android:id="@+id/maintab2"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" >
+
+                                <LinearLayout
+                                    android:id="@+id/tab2"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical" />
+
+                                <LinearLayout
+                                    android:id="@+id/tabRCategory"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:visibility="gone" />
+                                
+
+                                <LinearLayout
+                                    android:id="@+id/tabR2"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:background="@color/white"
+                                    android:orientation="vertical"
+                                    android:visibility="gone" >
+
+                                    <TextView
+                                        android:id="@+id/txtTittleRec"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Medium Text"
+                                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                                    <ImageView
+                                        android:id="@+id/imgRecipeL"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="220dp" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical" >
+
+                                        <TextView
+                                            android:id="@+id/txtIngList"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Ingredient List:"
+                                            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                                        <TextView
+                                            android:id="@+id/txtRecDesc"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="fill_parent"
+                                            android:text="Recipe Description"
+                                            android:textAppearance="?android:attr/textAppearanceSmall" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+
+        <Button
+            android:id="@+id/buttonClear"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@color/redclear"
+            android:height="20dp"
+            android:text="Clear"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/buttonBackRecipes"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@color/redclear"
+            android:height="20dp"
+            android:text="Back to Recipes"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/likeGrid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="fill"
+        android:background="@color/blackback"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/panelLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical" >
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:columnCount="1"
+                android:minHeight="50dp"
+                android:minWidth="50dp" >
+
+                <TextView
+                    android:id="@+id/textIPreview"
+                    android:layout_column="0"
+                    android:layout_gravity="bottom|center"
+                    android:layout_row="0"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/imageIPreview"
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    android:layout_row="0"
+                    android:src="@drawable/ic_launcher" />
+            </GridLayout>
+
+            <Button
+                android:id="@+id/buttonFavorite"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@color/redclear"
+                android:height="20dp"
+                android:text="Favorite"
+                android:textSize="12sp"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/buttonExclude"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@color/redclear"
+                android:height="20dp"
+                android:text="Exclude"
+                android:textSize="12sp"
+                android:visibility="visible" />
+        </LinearLayout>
+    </GridLayout>
+
+</GridLayout>
